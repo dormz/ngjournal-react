@@ -1,0 +1,43 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# CI – Storybook Build Check
+# ─────────────────────────────────────────────────────────────────────────────
+# Runs on pull requests to verify the Storybook build succeeds before merge.
+# Separating this from the deploy workflow keeps PR checks fast and
+# avoids granting Pages permissions to untrusted forks.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: CI – Storybook
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "React - NewGenJournal/frontend-nextjs/**"
+      - ".github/workflows/ci-storybook.yml"
+
+permissions:
+  contents: read
+
+env:
+  WORKING_DIR: React - NewGenJournal/frontend-nextjs
+
+jobs:
+  build:
+    name: Build Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        working-directory: ${{ env.WORKING_DIR }}
+        run: bun install --frozen-lockfile
+
+      - name: Build Storybook
+        working-directory: ${{ env.WORKING_DIR }}
+        run: bun run build-storybook
