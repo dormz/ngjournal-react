@@ -1,0 +1,552 @@
+---
+Title: Ant Design Component Semantic Descriptions
+URL: https://ant.design/llms-semantic.md
+---
+
+# Ant Design Component Semantic Description
+
+This document contains semantic descriptions of all components in the Ant Design component library.
+
+A total of 65 components contain semantic descriptions.
+
+## Component List
+
+### alert
+
+- `root`: The root element, containing the basic styles of the warning box, including border, background color, padding, rounded corners, and position.
+- `section`: Content element, using flexbox layout to control the layout and minimum width of the content area.
+- `icon`: Icon element, including icon color, line height, margin, and other styles, supporting different types of status icons.
+- `title`: The title element, containing the title text's color, font, and other styles.
+- `description`: Description element, containing the font size, line height, and other layout styles of the descriptive text.
+- `actions`: Action group elements, containing the layout and spacing style of the action buttons.
+- `close`: Closes the button element, including the button's basic styles.
+
+### anchor
+
+- `root`: The root element, containing basic styles such as layout positioning, padding, margins, and background color.
+- `item`: Link item element, including styles such as padding, text color, hover state, and transition animation.
+- `itemTitle`: Title text element, including font style, color variations, text decorations, transition effects, and other styles.
+- `indicator`: An indicator element that includes styles for width, height, background color, position change, and transition animations.
+
+### badge
+
+- `root`: The root element, containing basic layout styles such as relative positioning, inline-block layout, and adapting to content width.
+- `indicator`: An indicator element that includes complete logo styles such as positioning, hierarchy, size, color, font, text alignment, background, rounded corners, shadow, and transition animations.
+
+### breadcrumb
+
+- `root`: The root element, containing basic styles such as text color, font size, and icon size. Internally, it's an ordered list using flexbox layout.
+- `item`: The Item element, which includes styles such as text color, link color variation, hover effect, padding, rounded corners, height, and margin.
+- `separator`: Separator element, containing the separator's margin and color style.
+
+### button
+
+- `root`: The root element, containing complete button appearance styles including border style, background color, padding, rounded corners, shadow effects, transition animations, cursor style, text weight, alignment, etc.
+- `content`: The content element, which wraps the button text content and controls text layout styles such as text non-wrapping, center alignment, and optimized spacing of Chinese characters.
+- `icon`: Icon element, including icon display-related styles such as font size, color inheritance, and SVG style reset.
+
+### calendar
+
+- `root`: The root element, containing the calendar component's basic styles such as background color, border, and rounded corners, as well as its overall layout structure.
+- `header`: The header element, containing layout and style controls for the year selector, month selector, and mode switcher.
+- `body`: The main element, containing the calendar table's padding, layout controls, and other styles, used to house the calendar grid.
+- `content`: The content element, containing the size controls for the calendar table, such as its width and height, as well as its table style.
+- `item`: The item element, containing the calendar cell's background color, border, hover state, selected state, and other interactive styles.
+
+### card
+
+- `root`: The root element of the card container, containing basic styles such as positioning, background color, border, rounded corners, shadow, and padding.
+- `header`: The header area of ​​the card, containing styles such as flex layout, minimum height, padding, text color, font weight, font size, background color, bottom border, and top rounded corners.
+- `body`: The card's content area, including basic styles for content display such as padding and font size.
+- `extra`: The operation area in the upper right corner of the card, containing the text color and layout style of additional content.
+- `title`: Card title, including inline-block layout, flex proportions, text omission, and other title display styles.
+- `actions`: The action group at the bottom of the card, including flex layout, list style reset, background color, top border, bottom rounded corners, and other action button container styles.
+- `cover`: Title/cover page, including the display and layout style of the cover image.
+
+### card:meta
+
+- `root`: Sets the root element of metadata.
+- `section`: Sets the metadata content element
+- `avatar`: Sets the metadata icon
+- `title`: Set the metadata title
+- `description`: Sets the metadata description.
+
+### checkbox
+
+- `root`: The root element, containing the basic styles of the checkbox container, including inline flex layout, baseline alignment, cursor style, reset style, etc.
+- `icon`: A checkbox element, including size, orientation, background color, border, rounded corners, transition animation, and the checkmark style for the selected state.
+- `label`: A text element that includes the padding of the text and the spacing style between it and the checkbox.
+
+### collapse
+
+- `root`: The root element, containing container styles such as the border, rounded corners, and background color of the collapsible panel, and defining the overall layout and appearance of the control panel.
+- `header`: The header element, containing flex layout, padding, color, line height, cursor style, transition animations, and other interactive and stylistic elements of the panel header.
+- `title`: The title element, including the layout and typography style of the title text, such as flexbox adaptive layout and right margin.
+- `body`: Content element, including padding, color, background color, and other display styles for the panel content area.
+- `icon`: Icon elements, including font size, transition animations, rotation transformations, and styles and effects for expanding and collapsing arrows.
+
+### colorPicker
+
+- `root`: The trigger container, containing border styles, transition animations, size controls, and displaying color blocks and text content.
+- `popup`:
+  - `root`: The root container of the pop-up panel, containing styles such as background color, shadow effect, color selection panel, slider controls, and preset colors.
+
+### datePicker
+
+- `root`: The root element, containing the basic styles of the date picker container, including relative positioning, inline flex layout, padding, rounded corners, and transition animations.
+- `prefix`: Prefix element, containing layout styles such as flex layout and right margin.
+- `input`: The input box element, containing the core interactive styles of the input box, such as relative positioning, width, color, font, line height, and transition animations.
+- `suffix`: A suffix element containing styles for flex layout, color, line height, pointer events, transition animations, etc.
+- `popup`:
+  - `container`: The container element, which sets the background color, padding, rounded corners, shadow, border, and content display style.
+  - `header`: The header element of the popup, containing the layout and style of the header control area, including navigation buttons, month and year pickers, etc.
+  - `body`: The main element of the popup, containing the container layout and style of the date panel table.
+  - `content`: The pop-up content element, including the width, borders, cell layout, and display style of the date table.
+  - `item`: A pop-up item element containing interactive styles such as date cell size, background color, rounded corners, hover state, and selected state.
+  - `footer`: The element at the bottom of the pop-up, containing the layout style of the bottom operation area such as confirm/cancel buttons and quick selection options.
+
+### descriptions
+
+- `root`: The root element, containing the overall styles of the list container, including its base styles, reset styles, border styles, and layout direction.
+- `header`: The header element, containing layout and style controls for the header area, including flexbox layout, alignment, bottom margin, etc.
+- `title`: A heading element that includes heading text styles such as text omission, flex proportion, color, font weight, font size, and line height.
+- `extra`: Additional content elements, including styles for extra operational areas such as left margin, color, and font size.
+- `label`: A label element that includes styles for the label text, such as color, font weight, font size, line height, text alignment, and colon style.
+- `content`: Content element, including table cell layout, color, font size, row height, text wrapping, and other content display styles.
+
+### divider
+
+- `root`: The root element, containing the basic styles of the dividing container, including border and top styles, and separator styles.
+- `content`: The content element, containing styles for inline-block text, padding, and other separator text content.
+- `rail`: Background bar element, including styles for borders, top styles, and connecting lines.
+
+### drawer
+
+- `root`: The root element, containing the basic styles and layout controls for the drawer container, including fixed positioning, hierarchy control, pointer events, and colors.
+- `mask`: A masking element containing styles and interactive controls for the mask, including absolute positioning, hierarchy, background color, and pointer events.
+- `section`: Drawer container element, containing the drawer's main body style, including flex layout, width and height, overflow control, background color, pointer events, etc.
+- `header`: The header element, containing styles for the header area such as flex layout, alignment, padding, font size, line height, and bottom border.
+- `body`: Content element, including the display and layout style of the content area, such as flex percentage, minimum size, padding, and overflow scrolling.
+- `footer`: The footer element, containing styles for the bottom operational area, including flex shrinkage, padding, top border, etc.
+- `title`: The title element, containing styles for the title text such as flex proportion, margin, font weight, font size, and line height.
+- `extra`: Style controls for additional elements, including those with flexbox fixed layout and other extra operations.
+- `dragger`: A draggable element with drag handles for resizing the drawer, including absolute positioning, transparent background, pointer event control, hover state styles, and drag state styles.
+- `close`: Closes the button element, including the button's basic styles.
+
+### dropdown
+
+- `root`: The root element of the dropdown menu, used to set its positioning, hierarchy, and container styles.
+- `itemTitle`: The title content area for dropdown options, setting layout and text style.
+- `item`: A single option element in a dropdown menu, setting the option's interactive state and background style.
+- `itemContent`: The main content area for dropdown options, setting content layout and link styles.
+- `itemIcon`: The icon area for the dropdown options, setting the icon size and spacing style.
+
+### empty
+
+- `root`: The root element, used to set text alignment, font, and line height styles.
+- `image`: Icon element, sets its height, transparency, margins, and image style.
+- `description`: Describes the element and sets its text color and style.
+- `footer`: The bottom element, used to set the top margin and style the action buttons.
+
+### floatButton
+
+- `root`: The root element, which sets the basic style, shape, size, type, theme, fixed positioning, hierarchy, shadow, spacing, and other container styles for the floating button.
+- `content`: The content element, which sets the font size, color, alignment, line breaks, and other text display styles of the text content within the button.
+- `icon`: Icon element, sets the size, color, line height, alignment, and other display styles of the icon within the button.
+
+### floatButtonGroup
+
+- `root`: The root element, which sets the container style, fixed positioning, hierarchy, padding, spacing, orientation mode, and other combined layout styles for the floating button group.
+- `list`: A list element that sets the Flex layout, rounded corners, shadow, animation transitions, vertical alignment, and other list container styles for the button group list.
+- `item`: List item element, sets the basic button style such as style, size, shape, type, state, icon content, etc. for a single floating button.
+- `itemIcon`: List item icon element, sets the size, color, alignment, and other display styles of the icon within the floating button.
+- `itemContent`: List item content element, sets the style of the text content, logo, description, and other content areas within the floating button.
+- `trigger`: The trigger element that sets the style, shape, icon, hover state, expanded/collapse state, and other interactive styles of the trigger button in menu mode.
+- `triggerIcon`: Trigger icon element, sets the style, rotation animation, state toggling, and other icon interaction styles of the icon inside the trigger button.
+- `triggerContent`: Trigger content element, sets the style of text, logo, status indicator, and other content in the trigger button's content area.
+
+### form
+
+- `root`: The root element, containing the basic styles of the form item container, including bottom margin, vertical alignment, transition animations, hidden state, error warning state, etc.
+- `label`: A label element that includes flex layout, overflow hiding, text non-wrapping, text alignment, vertical alignment, and label display styles such as label color, font size, height, and required field marking.
+- `content`: The content element, containing the layout, style, and related styles of the form content area and control container.
+
+### image
+
+- `root`: The root element, used to set relative positioning and inline-block layout styles.
+- `image`: Image element, sets width, height, and vertical alignment styles.
+- `cover`: A tooltip element for displaying a floating image; its absolute positioning, background color, transparency, and transition animation style can be set.
+- `popup`:
+  - `root`: Preview the root element, set its fixed positioning, hierarchy, and background mask style.
+  - `mask`: Preview the masking element, set absolute positioning and semi-transparent background style.
+  - `body`: Preview content elements, set flex layout, center alignment, and pointer event styles.
+  - `footer`: Preview the footer element, set its absolute positioning, center alignment, and style for the bottom navigation area.
+  - `actions`: Preview the action group elements, set the flex layout, background color, rounded corners, and action button styles.
+
+### input
+
+- `root`: The root element, containing the basic styles of the input box container, including relative positioning, inline-block layout, width, minimum width, padding, color, font, line height, rounded corners, and transition animations.
+- `input`: The input box element, containing the core interactive styles and text input-related styles.
+- `prefix`: The wrapper element for the prefix, containing the layout and styles of the prefix content.
+- `suffix`: The wrapper element for the suffix, containing the layout and styles of the suffix content.
+- `count`: A character count element that includes the font and color style for displaying the character count.
+
+### input:password
+
+- `root`: root element
+- `input`: Input box element
+- `prefix`: The element wrapped by the prefix
+- `suffix`: The suffix containing the wrapper element.
+- `count`: Counts the number of text elements.
+
+### inputNumber
+
+- `root`: The root element, sets the inline-block layout, width, rounded corners, and resets styles.
+- `input`: An input box element that allows you to set the font, line height, text input style, and interaction style.
+- `prefix`: The element containing the prefix, setting its flex layout, alignment, and right margin style.
+- `suffix`: The wrapper element with the suffix, which sets the flex layout, margins, and transition animation styles.
+- `action`: A single action button element that sets the button's style, hover effect, and click interaction.
+- `actions`: Manipulates elements, setting absolute positioning, width, flex layout, and style of numeric adjustment buttons.
+
+### inputSearch
+
+- `root`: root element
+- `input`: Input box element
+- `prefix`: The element wrapped by the prefix
+- `suffix`: The suffix containing the wrapper element.
+- `count`: Counts the number of text elements.
+- `button`:
+  - `root`: The root element of the button
+  - `icon`: Button icon element
+  - `content`: Button content element
+
+### list
+
+- `extra`: Sets additional content
+- `actions`: Sets the list action group
+
+### masonry
+
+- `root`: The root element, used to set relative positioning, flex layout, and waterfall container styles.
+- `item`: Item element, sets absolute positioning, width calculation, transition animation, and waterfall item style.
+
+### mentions
+
+- `root`: The root element, which sets the inline flex layout, relative positioning, padding, and border styles.
+- `textarea`: A text area element that allows you to set the font, line height, text input style, and background style.
+- `popup`: A popup element that allows you to set absolute positioning, hierarchy, background color, rounded corners, shadow, and dropdown option styles.
+- `suffix`: The suffix element, containing the layout and style of the suffix content, such as a clear button, etc.
+
+### menu
+
+- `root`: The root element, containing the basic styles and layout of the menu container.
+- `item`: The item element, containing basic interactive styles for menu items such as relative positioning, block-level display, margins, whitespace handling, cursor styles, and transition animations.
+- `itemContent`: The item content element, containing the layout and typography style of the menu item content.
+- `itemIcon`: Icon element, including minimum width, font size, transition animation, icon reset style, and spacing control between the icon and text.
+- `itemTitle`: Menu title element (not applicable in horizontal mode), containing the style and layout of the title text.
+- `list`: Menu list element (not applicable in horizontal mode), including the layout and container style of the menu list.
+- `popup`: Popup menu (does not work in inline mode), including popup positioning, hierarchy, background, and other styles.
+- `subMenu`:
+  - `itemTitle`: Submenu title element, containing the style and interactive effects of the submenu title.
+  - `list`: A submenu list element that includes the layout and container style for the submenu list.
+  - `item`: A submenu item element that includes the style and interactive effects of the submenu item.
+  - `itemIcon`: Submenu item icon element, containing the size and style of the submenu icon.
+  - `itemContent`: The submenu item content element, containing the layout and typography of the submenu content.
+
+### message
+
+- `root`: The root element, which sets fixed positioning, hierarchy, padding, background color, rounded corners, shadow, and animation styles.
+- `icon`: Icon element, sets font size, right margin, and status color style.
+- `content`: The content element, which sets the inline block layout, text color, and content display style.
+
+### capital
+
+- `root`: The root element, containing the basic layout styles of the modal container, including relative positioning, top position, width, maximum width, margin, and bottom padding.
+- `mask`: A masking element that includes styles for the mask, such as fixed positioning, hierarchy, background color, and animation transitions.
+- `wrapper`: A wrapper element, typically used as an animation container to contain styles for animations and transitions.
+- `container`: A modal container element that includes the modal's main styles such as relative positioning, background color, background clipping, border, rounded corners, shadow, pointer events, and padding.
+- `header`: The header element, including header padding, bottom border, and other header area styles.
+- `title`: The title element, which includes the title text style such as margin, color, font weight, font size, line height, and line breaks.
+- `body`: Content element, including the background color, padding, and other display styles of the content area.
+- `footer`: The footer element, including the background color, padding, top border, rounded corners, and other styles for the footer area.
+
+### notification
+
+- `root`: The root element, which sets fixed positioning, hierarchy, padding, background color, rounded corners, shadow, and animation styles.
+- `icon`: Icon element, allows you to set absolute positioning, font size, line height, and status color style.
+- `title`: Title element, allowing you to set its color, font size, line height, and margin style.
+- `description`: Describes the element, sets the font size, color, and margin style.
+- `actions`: Action group elements, setting right float, top margin, and layout style for action buttons.
+
+### otp
+
+- `root`: The root element, which sets the inline flex layout, alignment, column spacing, and wrapping style.
+- `input`: An input box element that sets text centering, padding, and numeric input styles.
+- `separator`: Separator element, sets the display style of the separator between OTP input boxes.
+
+### pagination
+
+- `root`: The root element, used to set flex layout, alignment, line breaks, and list styles.
+- `item`: Page number element, sets size, padding, border, background color, hover and active styles.
+
+### popconfirm
+
+- `root`: The root element, used to set absolute positioning, layer hierarchy, transformation origin, arrow direction, and popup container styles.
+- `container`: The container element, which sets the background color, padding, rounded corners, shadow, border, and content display style.
+- `arrow`: An arrow element that allows you to set its width, height, position, color, and border style.
+- `title`: Title element, sets the title text style and spacing.
+- `content`: Description element, sets the style and layout of the description text.
+
+### popover
+
+- `root`: The root element, used to set absolute positioning, layer hierarchy, transformation origin, arrow direction, and popup container styles.
+- `container`: The container element, which sets the background color, padding, rounded corners, shadow, border, and content display style.
+- `arrow`: An arrow element that allows you to set its width, height, position, color, and border style.
+- `title`: Title element, sets the title text style and spacing.
+- `content`: Content element, sets the style and layout of the content text.
+
+### progress
+
+- `root`: The root element, sets relative positioning and basic container styles.
+- `body`: The main element, setting the layout and size style of the progress bar.
+- `rail`: A rail element that sets the background rail color and rounded corner style. This element does not exist in steps mode.
+- `track`: A track element that sets the color of the progress fill and the style of the transition animation.
+- `indicator`: An indicator element that sets the position and font style of percentage text or icons.
+
+### qrCode
+
+- `root`: The root element, used to set flex layout, padding, background color, border, rounded corners, and relative positioning styles.
+- `cover`: A mask element that sets absolute positioning, layer, background color, and loading status overlay styles.
+
+### radio
+
+- `root`: The root element, containing basic container styles such as layout styles, mouse styles, and text color when disabled.
+- `icon`: The selection box element, including rounded corner style, transition animation, border style, hover state, focus state, and other interactive styles.
+- `label`: A text element that includes text styles such as padding, text color, disabled status, and alignment.
+
+### result
+
+- `root`: The root element, containing basic container styles such as text alignment and layout styles.
+- `title`: A title element that includes text styles such as font size, text color, line height, and alignment.
+- `subTitle`: A subtitle element that includes text styles such as font size, text color, and line height.
+- `body`: Content element, including margins, padding, background color, and other content area styles.
+- `extra`: Operates on the area element, including layout styles such as margins, text alignment, and spacing between internal elements.
+- `icon`: Icon elements, including icon styles such as margin, text alignment, font size, and status color.
+
+### ribbon
+
+- `root`: The root element, used to set relative positioning and the style of its wrapping container.
+- `indicator`: An indicator element that allows you to set absolute positioning, padding, background color, rounded corners, and ribbon style.
+- `content`: A text element that sets the text color and the style of the ribbon content display.
+
+### segmented
+
+- `root`: The root element, which sets the inline-block layout, padding, background color, rounded corners, transition animations, and container styles.
+- `item`: Options element, sets relative positioning, text alignment, cursor style, transition animation, selected background color, and hover style.
+- `icon`: Icon element, sets the icon's size, color, and spacing from the text.
+- `label`: A label content element that sets the minimum height, line height, padding, text ellipsis, and content layout style.
+
+### skeleton
+
+- `root`: The root element, containing the basic styles of the skeleton screen container, including table display, width, animation effects, rounded corners, etc.
+- `header`: The header element, containing the layout style of the avatar placeholder area, including table cells, padding, and vertical alignment.
+- `section`: A block element that contains the layout style of the skeleton screen content area.
+- `avatar`: An avatar element that includes inline-block display, vertical alignment, background color, size, rounded corners, and other placeholder styles for the avatar.
+- `title`: The title element, including the width, height, background color, rounded corners, and other style settings for the title placeholder.
+- `paragraph`: Paragraph element, including padding, list item styles, background color, rounded corners, and other paragraph placeholder styles.
+
+### skeleton:element
+
+- `root`: root element
+- `content`: Content element
+
+### slider
+
+- `root`: The root element, used to set relative positioning, height, margins, padding, cursor style, and touch event control.
+- `track`: A track selection bar element that allows you to set absolute positioning, background color, rounded corners, and transition animation styles.
+- `tracks`: A container element for multiple track segments, with absolute positioning and transition animation styles set.
+- `rail`: Background rail element, with settings for absolute positioning, background color, rounded corners, and transition animation styles.
+- `handle`: The slider control point element, allowing you to set absolute positioning, size, outline, user selection, background color, border shadow, rounded corners, cursor style, and transition animation.
+
+### space
+
+- `root`: The root element, containing the basic styles for flex layout, spacing settings, alignment, line breaks, and other spacing containers.
+- `item`: The wrapped child component containing the layout and styles for the spacing item, providing a wrapper for inline alignment for each child element.
+- `separator`: The separator, containing styles to separate elements.
+
+### spin
+
+- `root`: The root element, sets absolute positioning, display control, color, font size, text alignment, vertical alignment, opacity, and transition animations (only effective when fullscreen is false).
+- `indicator`: An indicator element that allows you to set its width, height, font size, inline-block display, transition animation, origin, line height, and color.
+
+### spin:fullscreen
+
+- `mask`: Mask layer element
+- `indicator`: Indicator element
+
+### splitter
+
+- `root`: The root element, used to set flex layout, width, height, alignment, and stretch styles.
+- `panel`: A panel element that sets the base flex value, growth rate, and panel container style.
+- `dragger`: Drag and drop elements to set absolute positioning, user selection, hierarchy, center alignment, background color, hover state, and active state styles.
+
+### statistic
+
+- `root`: The root element, containing the reset styles for the statistics component and the overall container style.
+- `header`: The header element, containing the layout style for the bottom padding and heading area.
+- `title`: The title element, which includes the display style of the title text, such as text color and font size.
+- `content`: Content element, containing the display style of numerical content such as text color, font size, and font family.
+- `prefix`: Prefix element, containing layout styles for inline-block display, right margin, and other prefix content.
+- `suffix`: A suffix element that includes layout styles for inline-block display, left margin, and other suffix content.
+
+### steps
+
+- `root`: The root element, containing the basic styles of the step-by-step container, including flex layout, no line breaks, alignment, and CSS variables.
+- `item`: The step item element, containing the basic container style for a single step item, including flex layout and relative positioning.
+- `itemWrapper`: The wrapper element for each step item, containing wrapper styles for the step item content such as flex layout, no line breaks, and top padding.
+- `itemIcon`: The item icon element, including icon size, positioning, font size, and other icon display-related styles.
+- `itemHeader`: The header element for each item, including layout styles for the header area such as flex layout, no line breaks, and alignment.
+- `itemTitle`: The item title element, which includes title text styles such as color, font size, line height, text wrapping, and transition animations.
+- `itemSubtitle`: The subtitle element for each step, including subtitle styles such as color, font weight, font size, line height, margin, and line breaks.
+- `itemSection`: The step item section element, containing the layout and style of the step item content area.
+- `itemContent`: The content element for each step, including text styles such as color, font size, line height, text wrapping, and transition animations.
+- `itemRail`: The item rail element, including border style, border width, transition animation, and other rail style settings.
+
+### steps:items
+
+- `root`: root element
+- `wrapper`: Element wrapped within a step item
+- `icon`: Step item icon element
+- `header`: The header element for the steps.
+- `title`: Step title element
+- `subtitle`: Subtitle element for each step item
+- `section`: Step item section element
+- `content`: Step item content element
+- `rail`: Step item connector element
+
+### switch
+
+- `root`: The root element, containing the basic styles of the container, including minimum width, height, line height, vertical alignment, background color, border, rounded corners, cursor style, transition animations, user selection, and other switchable styles.
+- `content`: The content element, including the layout and styles of the content area, such as block-level display, overflow hiding, rounded corners, height, padding, and transition animations.
+
+### table
+
+- `root`: The root element, containing the basic styles of the table container such as font size, background color, rounded corners, and scrollbar color.
+- `section`: Container element containing table wrapper container styles such as clear float, maximum width, scrollbar background, etc.
+- `header`:
+  - `wrapper`: The header container element, containing the layout and container styles of the table header.
+  - `row`: The header row element, containing the layout and style of the header row.
+  - `cell`: The header cell element, containing header cell styles such as relative positioning, padding, text wrapping, background color, text color, and font weight.
+- `title`: The title element, which includes the style and layout of the table title.
+- `body`:
+  - `wrapper`: The main container element, containing the layout and container style of the table body.
+  - `row`: The main row element, containing interactive styles such as the data row's hover effect, selected state, and expanded state.
+  - `cell`: The main cell element, containing basic styles for data cells such as relative positioning, padding, and text wrapping.
+- `footer`: The footer element, containing styles such as background color and text color at the bottom of the table.
+- `content`: Content element, containing the style and layout of the table content area.
+- `pagination`:
+  - `root`: The root element for pagination, containing the basic styles and layout of the pagination components.
+  - `item`: A single pagination element that includes the style and interactive effects of the pagination item.
+
+### tabs
+
+- `root`: The root element, containing the basic styles, layout, and orientation control of the tab container.
+- `item`: The Item element, containing styles and interactive effects for the tag item, including relative positioning, padding, color, text ellipsis, rounded corners, and transition animations.
+- `header`: The header element, containing the layout, background, border, and other styles of the tab header navigation.
+- `indicator`: An indicator element that includes the indicator bar's color, position, size, transition animation, and other active status indication styles.
+- `content`: Content element, including the layout, padding, and other content display styles of the tab content panel.
+- `popup`:
+  - `root`: The pop-up menu element, containing styles for the dropdown menu such as absolute positioning, hierarchy, display control, maximum height, and scrolling.
+
+### tag
+
+- `root`: The root element, containing basic styles for tags such as inline-block layout, automatic height, padding, font size, line height, no line breaks, background color, borders, rounded corners, opacity, transition animations, text alignment, and relative positioning.
+- `icon`: Icon element, including font size, color, cursor style, transition animation, and other display styles of the icon.
+- `content`: Content element, containing the text content's color, font style, and other style elements for the content area.
+
+### tag:group
+
+- `root`: The root element, which sets the container style and layout for the tag group.
+- `item`: A tag element that allows you to set styles such as inline block display, height, padding, font size, line height, background color, border, rounded corners, transparency, transition animation, and selectable state.
+
+### textArea
+
+- `root`: The root element, used to set the style, border, rounded corners, transition animations, and state control of the text field wrapper.
+- `textarea`: A text area element that allows you to set the font, line height, padding, color, background, border, text input style, and multi-line text display style.
+- `count`: A character counter element that sets the position, font, color, and numerical count style of the character count.
+
+### timeline
+
+- `root`: The root element, sets the list style of the timeline container, including basic container styles such as reset, vertical layout, dotted icons, outline style, and alternating layout.
+- `item`: A node element that sets the relative positioning, margins, padding, font size, completion status, color theme, layout direction, and other basic styles for a single time node.
+- `itemWrapper`: A node wrapper element that sets the style of the container for the content of a time node.
+- `itemIcon`: Node icon element, allowing you to set the absolute positioning, width and height, background color, border, rounded corners, ripple animation, and other icon styles of the node header icon.
+- `itemHeader`: The node header element, which sets the layout, alignment, text direction, and other styles of the header area containing the title and connectors.
+- `itemTitle`: The node title element, which sets the font size, line height, color, and other text styles of the node title text.
+- `itemSection`: A node-based section element that sets the Flexbox layout, line breaks, spacing, and other layout styles for the section container containing the header and content.
+- `itemContent`: The node content element, which sets the relative positioning, top offset, left margin, text color, word wrapping, and other content styles of the node's detailed content.
+- `itemRail`: A node connector element that sets the absolute positioning, top offset, left offset, height, border color, width, style, and other connector styles for the track lines connecting time nodes.
+
+### timeline:items
+
+- `root`: root element
+- `wrapper`: A node containing an element.
+- `icon`: Node icon element
+- `header`: The node header element
+- `title`: Node title element
+- `section`: Node section element
+- `content`: Node content element
+- `rail`: Node connector element
+
+### tooltip
+
+- `root`: The root element (including arrows and content elements), sets absolute positioning, layer, block-level display, maximum width, visibility, transformation origin, and arrow background color.
+- `container`: The content element, setting minimum width and height, padding, color, text alignment, background color, rounded corners, shadow, and border styles.
+- `arrow`: An arrow element that allows you to set its width, height, position, color, and border style.
+
+### tour
+
+- `root`: Guides the root container, setting container styles such as absolute positioning, hierarchy control, maximum width, visibility, arrow background color variable, and theme styles.
+- `cover`: Card cover area, where you set text center alignment, padding, image width, and other image display styles.
+- `section`: The main content area of ​​the card, where you can set card styles such as text alignment, rounded corners, box shadow, relative positioning, background color, border, and background cropping.
+- `footer`: The bottom area of ​​the card, where you can set the padding, right alignment, rounded corners, Flex layout, and other bottom container styles.
+- `actions`: Actions to the button group container, setting the button group layout style such as automatic left margin and button spacing.
+- `indicator`: A single indicator element that allows you to set its width, height, inline block display, rounded corners, background color, right margin, and dot style for active status.
+- `indicators`: Indicator group container, sets the style of the indicator container, such as inline block display.
+- `header`: The header area of ​​the card, where you set the header container style, including padding, width calculation, and word wrapping.
+- `title`: Introduces the title text, allowing you to set the font weight and other title text styles.
+- `description`: Guide text, setting padding, word wrapping, and other descriptive text styles.
+- `mask`: A masking element that allows you to set masking styles such as fixed positioning, full-screen coverage, layering, pointer events, and transition animations.
+
+### transfer
+
+- `root`: The root element, which sets the basic styles and layout control for flexbox layouts and shuttle containers.
+- `section`: A section element that sets the container style for a single-sided shuttle box, including flex layout, width, height, minimum height, border, and rounded corners.
+- `header`: The header element, which sets the style of the header area, including flex layout, alignment, height, padding, color, background color, bottom border, and rounded corners.
+- `title`: The title element, used to set the layout and style of the title text, including text omission, flex proportions, text alignment, and automatic left margin.
+- `body`: Content element, sets the container style and layout control for the main body of the list.
+- `list`: A list element that sets the style, layout, and scrolling control of the list content.
+- `item`: List item element, setting relative positioning, padding, border, hover state, selected state, disabled state, and other interactive styles for the list item.
+- `itemIcon`: List item icon element, sets the style and interaction state of icons such as checkboxes.
+- `itemContent`: The list item content element, which sets the display style of the list item text content, such as text omission and padding.
+- `footer`: The footer element, which sets the style and layout of the bottom navigation area.
+- `actions`: Action elements, setting the style, layout, and interaction state of the shuttle button group.
+
+### tree
+
+- `root`: The root element, which sets the basic styles, layout, and container controls of the tree control.
+- `item`: Item element, sets the basic style, drag-and-drop state, role attributes, indentation, toggle, content wrapper, and other node structure of the tree node.
+- `itemTitle`: Title element, sets the display style and text content of the tree node title text.
+- `itemIcon`: Icon element that sets the style, size, and status display of tree node icons.
+
+### upload
+
+- `root`: The root element container, containing basic styles such as layout styles, disabled text color, user selection controls, and mouse styles.
+- `list`: A container for a list of files, containing styles such as layout, transition animations, and spacing controls.
+- `item`: The file item element, including styles such as padding, background color, border style, hover effect, status color, and transition animation.
+
+---
+Title: Resources
+URL: https://ant.design/docs/resources
+---
+
