@@ -14,10 +14,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container
 builder.Services.AddControllers();
 
-// Configure Entity Framework
+// Configure Entity Framework - use fallback if config is missing/invalid (e.g. user secrets placeholder)
+const string fallbackConnectionString = "Server=localhost;Database=NewGenJournalDb;Trusted_Connection=True;TrustServerCertificate=True";
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+if (string.IsNullOrWhiteSpace(connectionString) ||
+    (!connectionString.Contains("Server=", StringComparison.OrdinalIgnoreCase) && !connectionString.Contains("Data Source=", StringComparison.OrdinalIgnoreCase)))
+{
+    connectionString = fallbackConnectionString;
+}
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection") 
-        ?? "Server=DORMZ-PC\\SQLEXPRESS;Database=NewGenJournalDb;Persist Security Info=False;user id=sa;password=sa; TrustServerCertificate=true"));
+    options.UseSqlServer(connectionString));
 
 // Configure JWT Authentication
 var jwtKey = builder.Configuration["Jwt:Key"] ?? "Q@Vzt3&JtgxFj0*$dlh%Rrdhk2D$U91mBt";
@@ -97,10 +103,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
-// Use CORS
+// CORS must run before HTTPS redirection so preflight and responses get CORS headers
 app.UseCors("AllowReactApp");
+
+// Only redirect HTTP→HTTPS in production; in Development use HTTP (e.g. http://localhost:5000)
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
 
 // Use custom tenant middleware
 app.UseMiddleware<TenantMiddleware>();
@@ -109,6 +119,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Root: in Development redirect to Swagger; otherwise return API info
+app.MapGet("/", (IWebHostEnvironment env) => env.IsDevelopment()
+    ? Results.Redirect("/swagger")
+    : Results.Ok(new { name = "NewGenJournal API", status = "running", docs = "Not available in production" }))
+    .ExcludeFromDescription();
 
 // Ensure database is created and seeded
 using (var scope = app.Services.CreateScope())
