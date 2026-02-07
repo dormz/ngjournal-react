@@ -1,0 +1,81 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Deploy Storybook to GitHub Pages
+# ─────────────────────────────────────────────────────────────────────────────
+# Uses the modern "artifact + deploy-pages" approach (no gh-pages branch needed).
+#
+# Prerequisites (one-time repo setup):
+#   1. Settings → Pages → Source → "GitHub Actions"
+#   2. Settings → Actions → General → Workflow permissions → "Read and write"
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Deploy Storybook
+
+on:
+  # Deploy on pushes to the default branch
+  push:
+    branches: [main]
+    paths:
+      - "React - NewGenJournal/frontend-nextjs/**"
+      - ".github/workflows/deploy-storybook.yml"
+
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+# ─── Permissions required for GitHub Pages deployment ───────────────────────
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# ─── Prevent concurrent deployments ────────────────────────────────────────
+concurrency:
+  group: pages
+  cancel-in-progress: false # let the in-flight deploy finish
+
+# ─── Environment variables shared across jobs ──────────────────────────────
+env:
+  WORKING_DIR: React - NewGenJournal/frontend-nextjs
+
+jobs:
+  # ── Build ──────────────────────────────────────────────────────────────────
+  build:
+    name: Build Storybook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        working-directory: ${{ env.WORKING_DIR }}
+        run: bun install --frozen-lockfile
+
+      - name: Build Storybook
+        working-directory: ${{ env.WORKING_DIR }}
+        run: bun run build-storybook
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.WORKING_DIR }}/storybook-static
+
+  # ── Deploy ─────────────────────────────────────────────────────────────────
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  # ── Build check on PRs (no deploy) ────────────────────────────────────────
+  # This job is defined separately so PRs targeting main get a build check.
+  # It reuses the same workflow file for simplicity.
