@@ -9,8 +9,7 @@ const meta: Meta<typeof Timeline> = {
   title: 'Ant Design/Data Display/Timeline',
   component: Timeline,
   argTypes: {
-    mode: { control: 'select', options: ['left', 'alternate', 'right'] },
-    pending: { control: 'text' },
+    mode: { control: 'select', options: ['start', 'alternate', 'end'] },
     reverse: { control: 'boolean' },
   },
 };
@@ -44,11 +43,11 @@ export const WithColors: Story = {
 
 export const Pending: Story = {
   args: {
-    pending: 'Recording...',
     items: [
       { children: 'Create a services site 2015-09-01' },
       { children: 'Solve initial network problems 2015-09-01' },
       { children: 'Technical testing 2015-09-01' },
+      { children: 'Recording...', dot: <ClockCircleOutlined style={{ fontSize: '16px' }} />, color: 'gray' },
     ],
   },
 };
@@ -69,7 +68,7 @@ export const Alternate: Story = {
 
 export const RightAligned: Story = {
   args: {
-    mode: 'right',
+    mode: 'end',
     items: [
       { children: 'Create a services site 2015-09-01' },
       { children: 'Solve initial network problems 2015-09-01' },

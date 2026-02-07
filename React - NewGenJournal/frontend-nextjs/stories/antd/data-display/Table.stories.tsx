@@ -90,7 +90,7 @@ export const Loading: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       <Table columns={columns} dataSource={data} size="small" title={() => 'Small'} />
       <Table columns={columns} dataSource={data} size="middle" title={() => 'Middle'} />
       <Table columns={columns} dataSource={data} title={() => 'Default'} />

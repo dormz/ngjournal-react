@@ -1,0 +1,86 @@
+---
+description: Ant Design v6 best practices — avoid deprecated props and use current APIs
+globs: "**/*.tsx"
+alwaysApply: false
+---
+
+# Ant Design v6 — Deprecated Props & Best Practices
+
+This project uses **antd ^6** with **@ant-design/icons ^6**. Never use deprecated APIs.
+
+## Renamed Props
+
+| Component | Deprecated | Use Instead |
+|-----------|-----------|-------------|
+| Alert | `message` | `title` |
+| Alert | `closeText` | `closable.closeIcon` |
+| Card | `bordered` | `variant` (`"outlined"` / `"borderless"`) |
+| Card | `headStyle` / `bodyStyle` | `styles.header` / `styles.body` |
+| Carousel | `dotPosition` | `dotPlacement` |
+| Collapse | `destroyInactivePanel` | `destroyOnHidden` |
+| Collapse | `expandIconPosition` | `expandIconPlacement` |
+| Divider | `type` | `orientation` (`"horizontal"` / `"vertical"`) |
+| Drawer | `width` / `height` | `size` |
+| Drawer | `headerStyle` / `bodyStyle` / `footerStyle` | `styles.header` / `styles.body` / `styles.footer` |
+| Empty | `imageStyle` | `styles.image` |
+| Modal | `bodyStyle` / `maskStyle` | `styles.body` / `styles.mask` |
+| Modal | `destroyOnClose` | `destroyOnHidden` |
+| Notification | `message` | `title` |
+| Notification | `btn` | `actions` |
+| Progress | `strokeWidth` / `width` | `size` |
+| Progress | `trailColor` | `railColor` |
+| Progress | `gapPosition` | `gapPlacement` |
+| Space | `direction` | `orientation` |
+| Space | `split` | `separator` |
+| Statistic | `valueStyle` | `styles.content` |
+| Steps | `progressDot` | `type="dot"` |
+| Steps | `direction` | `orientation` |
+| Steps | `items.description` | `items.content` |
+| Steps | `labelPlacement` | `titlePlacement` |
+| Tabs | `tabPosition` | `tabPlacement` |
+| Tabs | `destroyInactiveTabPane` | `destroyOnHidden` |
+| Tag | `bordered={false}` | `variant="filled"` |
+| Tag | `color="xxx-inverse"` | `variant="solid"` |
+| Timeline | `pending` / `pendingDot` | Add pending item via `items` |
+| Timeline | `mode="left"` / `mode="right"` | `mode="start"` / `mode="end"` |
+| Tooltip | `overlayStyle` / `overlayClassName` | `styles.root` / `classNames.root` |
+| Tooltip | `destroyTooltipOnHide` | `destroyOnHidden` |
+
+## Removed / Replaced Components
+
+| Deprecated | Use Instead |
+|-----------|-------------|
+| `BackTop` | `FloatButton.BackTop` |
+| `Dropdown.Button` | `Space.Compact` + `Dropdown` + `Button` |
+| `Input.Group` | `Space.Compact` |
+| `Button.Group` | `Space.Compact` |
+| `Statistic.Countdown` | `Statistic.Timer type="countdown"` |
+
+## Popup-Related Renames (Select, Cascader, TreeSelect, DatePicker, TimePicker, AutoComplete, Mentions)
+
+- `dropdownClassName` / `popupClassName` → `classNames.popup.root`
+- `dropdownStyle` → `styles.popup.root`
+- `dropdownRender` → `popupRender`
+- `onDropdownVisibleChange` → `onOpenChange`
+- `bordered` → `variant`
+
+## Data-Driven Pattern (use `items`, not children)
+
+```tsx
+// BAD — deprecated children pattern
+<Menu><Menu.Item key="1">Home</Menu.Item></Menu>
+<Select><Select.Option value="a">A</Select.Option></Select>
+
+// GOOD — data-driven items/options
+<Menu items={[{ key: '1', label: 'Home' }]} />
+<Select options={[{ value: 'a', label: 'A' }]} />
+```
+
+Applies to: Menu, Tabs, Steps, Breadcrumb, Collapse, Timeline, Select, Mentions.
+
+## General Rules
+
+- Always use `open` (not `visible`) for Modal, Drawer, Dropdown, Tooltip, Popover, Popconfirm.
+- Use CSS-in-JS tokens via `ConfigProvider theme` — no Less variables or style imports.
+- Import icons from `@ant-design/icons` (tree-shakeable, v6 compatible).
+- Use `App.useApp()` for `message`, `notification`, and `modal` — avoid static methods.

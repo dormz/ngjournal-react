@@ -35,7 +35,7 @@ export const GroupBasic: Story = {
 export const GroupVertical: Story = {
   render: () => (
     <Radio.Group defaultValue={1}>
-      <Space direction="vertical">
+      <Space orientation="vertical">
         <Radio value={1}>Option A</Radio>
         <Radio value={2}>Option B</Radio>
         <Radio value={3}>Option C</Radio>
@@ -47,7 +47,7 @@ export const GroupVertical: Story = {
 
 export const ButtonStyle: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Radio.Group defaultValue="a">
         <Radio.Button value="a">Hangzhou</Radio.Button>
         <Radio.Button value="b">Shanghai</Radio.Button>
@@ -66,7 +66,7 @@ export const ButtonStyle: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Radio.Group defaultValue="a" size="large">
         <Radio.Button value="a">Large</Radio.Button>
         <Radio.Button value="b">Large</Radio.Button>
@@ -88,7 +88,7 @@ export const Sizes: Story = {
 
 export const Disabled: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Radio disabled>Disabled</Radio>
       <Radio disabled defaultChecked>Disabled Checked</Radio>
     </Space>

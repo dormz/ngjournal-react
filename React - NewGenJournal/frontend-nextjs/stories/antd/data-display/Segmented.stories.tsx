@@ -61,7 +61,7 @@ export const IconOnly: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Segmented size="small" options={['Daily', 'Weekly', 'Monthly']} />
       <Segmented options={['Daily', 'Weekly', 'Monthly']} />
       <Segmented size="large" options={['Daily', 'Weekly', 'Monthly']} />

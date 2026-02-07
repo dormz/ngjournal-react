@@ -68,7 +68,7 @@ export const Bordered: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       <Descriptions
         title="Small"
         size="small"

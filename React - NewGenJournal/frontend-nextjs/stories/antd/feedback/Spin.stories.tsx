@@ -34,7 +34,7 @@ export const InsideContainer: Story = {
   render: () => (
     <Spin tip="Loading...">
       <Alert
-        message="Alert message title"
+        title="Alert message title"
         description="Further details about the context of this alert."
         type="info"
       />
@@ -56,7 +56,7 @@ export const Nested: Story = {
     <Spin spinning={true}>
       <div style={{ padding: 50, background: '#f0f2f5', borderRadius: 4 }}>
         <Alert
-          message="Alert message title"
+          title="Alert message title"
           description="Further details about the context of this alert."
           type="info"
         />

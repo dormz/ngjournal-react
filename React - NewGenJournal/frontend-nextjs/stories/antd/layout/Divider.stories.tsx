@@ -10,7 +10,7 @@ const meta: Meta<typeof Divider> = {
   title: 'Ant Design/Layout/Divider',
   component: Divider,
   argTypes: {
-    type: { control: 'select', options: ['horizontal', 'vertical'] },
+    orientation: { control: 'select', options: ['horizontal', 'vertical'] },
     dashed: { control: 'boolean' },
     orientation: { control: 'select', options: ['left', 'right', 'center'] },
     plain: { control: 'boolean' },
@@ -46,7 +46,7 @@ export const WithText: Story = {
 export const Vertical: Story = {
   render: () => (
     <div>
-      Text <Divider type="vertical" /> <a href="#">Link</a> <Divider type="vertical" /> <a href="#">Link</a>
+      Text <Divider orientation="vertical" /> <a href="#">Link</a> <Divider orientation="vertical" /> <a href="#">Link</a>
     </div>
   ),
 };

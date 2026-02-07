@@ -17,7 +17,7 @@ const meta: Meta<typeof Tag> = {
   component: Tag,
   argTypes: {
     closable: { control: 'boolean' },
-    bordered: { control: 'boolean' },
+    variant: { control: 'select', options: ['outlined', 'filled', 'solid', 'borderless'] },
     color: { control: 'text' },
   },
 };
@@ -62,7 +62,7 @@ export const Colors: Story = {
 
 export const StatusTags: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Space size={[0, 8]} wrap>
         <Tag icon={<CheckCircleOutlined />} color="success">success</Tag>
         <Tag icon={<SyncOutlined spin />} color="processing">processing</Tag>
@@ -82,25 +82,25 @@ export const StatusTags: Story = {
   ),
 };
 
-export const Borderless: Story = {
+export const Filled: Story = {
   render: () => (
     <Space size={[0, 8]} wrap>
-      <Tag bordered={false}>Tag 1</Tag>
-      <Tag bordered={false} color="processing">Processing</Tag>
-      <Tag bordered={false} color="success">Success</Tag>
-      <Tag bordered={false} color="error">Error</Tag>
-      <Tag bordered={false} color="warning">Warning</Tag>
-      <Tag bordered={false} color="magenta">Magenta</Tag>
-      <Tag bordered={false} color="red">Red</Tag>
-      <Tag bordered={false} color="volcano">Volcano</Tag>
-      <Tag bordered={false} color="orange">Orange</Tag>
-      <Tag bordered={false} color="gold">Gold</Tag>
-      <Tag bordered={false} color="lime">Lime</Tag>
-      <Tag bordered={false} color="green">Green</Tag>
-      <Tag bordered={false} color="cyan">Cyan</Tag>
-      <Tag bordered={false} color="blue">Blue</Tag>
-      <Tag bordered={false} color="geekblue">Geekblue</Tag>
-      <Tag bordered={false} color="purple">Purple</Tag>
+      <Tag variant="filled">Tag 1</Tag>
+      <Tag variant="filled" color="processing">Processing</Tag>
+      <Tag variant="filled" color="success">Success</Tag>
+      <Tag variant="filled" color="error">Error</Tag>
+      <Tag variant="filled" color="warning">Warning</Tag>
+      <Tag variant="filled" color="magenta">Magenta</Tag>
+      <Tag variant="filled" color="red">Red</Tag>
+      <Tag variant="filled" color="volcano">Volcano</Tag>
+      <Tag variant="filled" color="orange">Orange</Tag>
+      <Tag variant="filled" color="gold">Gold</Tag>
+      <Tag variant="filled" color="lime">Lime</Tag>
+      <Tag variant="filled" color="green">Green</Tag>
+      <Tag variant="filled" color="cyan">Cyan</Tag>
+      <Tag variant="filled" color="blue">Blue</Tag>
+      <Tag variant="filled" color="geekblue">Geekblue</Tag>
+      <Tag variant="filled" color="purple">Purple</Tag>
     </Space>
   ),
 };

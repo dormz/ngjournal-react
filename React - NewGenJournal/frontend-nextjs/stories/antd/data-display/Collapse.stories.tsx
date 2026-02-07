@@ -73,7 +73,7 @@ export const Ghost: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="middle" style={{ width: '100%' }}>
       <Collapse
         size="small"
         items={[{ key: '1', label: 'Small', children: <p>{text}</p> }]}

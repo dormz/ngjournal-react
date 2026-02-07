@@ -93,9 +93,9 @@ function ComponentShowcase() {
       {/* Feedback */}
       <Card title="Feedback" size="small">
         <Flex vertical style={{ width: '100%' }}>
-          <Alert message="Informational note" type="info" showIcon />
-          <Alert message="Operation successful" type="success" showIcon />
-          <Alert message="Something needs attention" type="warning" showIcon />
+          <Alert title="Informational note" type="info" showIcon />
+          <Alert title="Operation successful" type="success" showIcon />
+          <Alert title="Something needs attention" type="warning" showIcon />
         </Flex>
       </Card>
 

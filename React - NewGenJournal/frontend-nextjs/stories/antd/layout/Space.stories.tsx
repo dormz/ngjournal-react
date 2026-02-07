@@ -9,7 +9,7 @@ const meta: Meta<typeof Space> = {
   title: 'Ant Design/Layout/Space',
   component: Space,
   argTypes: {
-    direction: { control: 'select', options: ['horizontal', 'vertical'] },
+    orientation: { control: 'select', options: ['horizontal', 'vertical'] },
     size: { control: 'select', options: ['small', 'middle', 'large'] },
     wrap: { control: 'boolean' },
     align: { control: 'select', options: ['start', 'end', 'center', 'baseline'] },
@@ -32,7 +32,7 @@ export const Default: Story = {
 
 export const VerticalSpace: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: '100%' }}>
+    <Space orientation="vertical" style={{ width: '100%' }}>
       <Card title="Card" size="small"><p>Card content</p></Card>
       <Card title="Card" size="small"><p>Card content</p></Card>
       <Card title="Card" size="small"><p>Card content</p></Card>
@@ -76,7 +76,7 @@ export const Wrap: Story = {
 
 export const Split: Story = {
   render: () => (
-    <Space split={<Divider type="vertical" />}>
+    <Space separator={<Divider orientation="vertical" />}>
       <a href="#">Link 1</a>
       <a href="#">Link 2</a>
       <a href="#">Link 3</a>

@@ -28,7 +28,7 @@ export const Default: Story = {
 
 export const Line: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: '100%' }}>
+    <Space orientation="vertical" style={{ width: '100%' }}>
       <Progress percent={30} />
       <Progress percent={50} status="active" />
       <Progress percent={70} status="exception" />
@@ -59,7 +59,7 @@ export const Dashboard: Story = {
 
 export const Small: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: 200 }}>
+    <Space orientation="vertical" style={{ width: 200 }}>
       <Progress percent={30} size="small" />
       <Progress percent={50} size="small" status="active" />
       <Progress percent={70} size="small" status="exception" />
@@ -70,7 +70,7 @@ export const Small: Story = {
 
 export const Steps: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: '100%' }}>
+    <Space orientation="vertical" style={{ width: '100%' }}>
       <Progress percent={50} steps={3} />
       <Progress percent={30} steps={5} />
       <Progress percent={100} steps={5} size="small" strokeColor="#52c41a" />
@@ -80,7 +80,7 @@ export const Steps: Story = {
 
 export const SuccessSegment: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: '100%' }}>
+    <Space orientation="vertical" style={{ width: '100%' }}>
       <Progress percent={60} success={{ percent: 30 }} />
       <Progress type="circle" percent={60} success={{ percent: 30 }} />
     </Space>
@@ -89,7 +89,7 @@ export const SuccessSegment: Story = {
 
 export const CustomColor: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: '100%' }}>
+    <Space orientation="vertical" style={{ width: '100%' }}>
       <Progress percent={25} strokeColor="#108ee9" />
       <Progress
         percent={99.9}

@@ -10,7 +10,7 @@ const meta: Meta<typeof Carousel> = {
   argTypes: {
     autoplay: { control: 'boolean' },
     dots: { control: 'boolean' },
-    dotPosition: { control: 'select', options: ['top', 'bottom', 'left', 'right'] },
+    dotPlacement: { control: 'select', options: ['top', 'bottom', 'left', 'right'] },
     effect: { control: 'select', options: ['scrollx', 'fade'] },
   },
 };
@@ -62,7 +62,7 @@ export const FadeEffect: Story = {
 
 export const VerticalDots: Story = {
   render: () => (
-    <Carousel dotPosition="left" style={{ width: 500 }}>
+    <Carousel dotPlacement="left" style={{ width: 500 }}>
       <div><h3 style={contentStyle}>1</h3></div>
       <div><h3 style={contentStyle}>2</h3></div>
       <div><h3 style={contentStyle}>3</h3></div>

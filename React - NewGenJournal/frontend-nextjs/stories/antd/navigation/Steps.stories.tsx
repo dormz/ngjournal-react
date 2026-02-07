@@ -15,10 +15,10 @@ const meta: Meta<typeof Steps> = {
   component: Steps,
   argTypes: {
     current: { control: 'number' },
-    direction: { control: 'select', options: ['horizontal', 'vertical'] },
+    orientation: { control: 'select', options: ['horizontal', 'vertical'] },
     size: { control: 'select', options: ['default', 'small'] },
     status: { control: 'select', options: ['wait', 'process', 'finish', 'error'] },
-    type: { control: 'select', options: ['default', 'navigation', 'inline'] },
+    type: { control: 'select', options: ['default', 'navigation', 'inline', 'dot'] },
   },
 };
 
@@ -29,13 +29,13 @@ export const Default: Story = {
   args: {
     current: 1,
     items: [
-      { title: 'Finished', description: 'This is a description.' },
+      { title: 'Finished', content: 'This is a description.' },
       {
         title: 'In Progress',
-        description: 'This is a description.',
+        content: 'This is a description.',
         subTitle: 'Left 00:00:08',
       },
-      { title: 'Waiting', description: 'This is a description.' },
+      { title: 'Waiting', content: 'This is a description.' },
     ],
   },
 };
@@ -65,12 +65,12 @@ export const WithIcons: Story = {
 
 export const Vertical: Story = {
   args: {
-    direction: 'vertical',
+    orientation: 'vertical',
     current: 1,
     items: [
-      { title: 'Finished', description: 'This is a description.' },
-      { title: 'In Progress', description: 'This is a description.' },
-      { title: 'Waiting', description: 'This is a description.' },
+      { title: 'Finished', content: 'This is a description.' },
+      { title: 'In Progress', content: 'This is a description.' },
+      { title: 'Waiting', content: 'This is a description.' },
     ],
   },
 };
@@ -80,21 +80,21 @@ export const ErrorStatus: Story = {
     current: 1,
     status: 'error',
     items: [
-      { title: 'Finished', description: 'This is a description.' },
-      { title: 'In Progress', description: 'This is a description.' },
-      { title: 'Waiting', description: 'This is a description.' },
+      { title: 'Finished', content: 'This is a description.' },
+      { title: 'In Progress', content: 'This is a description.' },
+      { title: 'Waiting', content: 'This is a description.' },
     ],
   },
 };
 
 export const Dot: Story = {
   args: {
-    progressDot: true,
+    type: 'dot',
     current: 1,
     items: [
-      { title: 'Finished', description: 'This is a description.' },
-      { title: 'In Progress', description: 'This is a description.' },
-      { title: 'Waiting', description: 'This is a description.' },
+      { title: 'Finished', content: 'This is a description.' },
+      { title: 'In Progress', content: 'This is a description.' },
+      { title: 'Waiting', content: 'This is a description.' },
     ],
   },
 };
@@ -103,9 +103,9 @@ export const Clickable: Story = {
   args: {
     current: 1,
     items: [
-      { title: 'Step 1', description: 'Click to go back.' },
-      { title: 'Step 2', description: 'Currently here.' },
-      { title: 'Step 3', description: 'Click to advance.' },
+      { title: 'Step 1', content: 'Click to go back.' },
+      { title: 'Step 2', content: 'Currently here.' },
+      { title: 'Step 3', content: 'Click to advance.' },
     ],
     onChange: (current: number) => console.log('Step changed to:', current),
   },

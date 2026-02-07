@@ -24,7 +24,7 @@ export const Default: Story = {
 
 export const Disabled: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Checkbox disabled>Disabled</Checkbox>
       <Checkbox disabled defaultChecked>Disabled Checked</Checkbox>
     </Space>
@@ -33,7 +33,7 @@ export const Disabled: Story = {
 
 export const Group: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Checkbox.Group
         options={['Apple', 'Pear', 'Orange']}
         defaultValue={['Apple']}

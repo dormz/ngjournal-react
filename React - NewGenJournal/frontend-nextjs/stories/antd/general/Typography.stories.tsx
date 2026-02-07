@@ -28,7 +28,7 @@ export const Titles: Story = {
 
 export const TextVariants: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Text>Ant Design (default)</Text>
       <Text type="secondary">Ant Design (secondary)</Text>
       <Text type="success">Ant Design (success)</Text>
@@ -65,7 +65,7 @@ export const ParagraphDemo: Story = {
 
 export const LinkDemo: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Link href="https://ant.design" target="_blank">Ant Design (Link)</Link>
       <Link href="https://ant.design" target="_blank" disabled>Ant Design (Disabled Link)</Link>
     </Space>
@@ -74,7 +74,7 @@ export const LinkDemo: Story = {
 
 export const Copyable: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Paragraph copyable>This is a copyable text.</Paragraph>
       <Paragraph copyable={{ text: 'Hello, Ant Design!' }}>Replace copy text.</Paragraph>
     </Space>
@@ -83,7 +83,7 @@ export const Copyable: Story = {
 
 export const Editable: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Paragraph editable>This is an editable text.</Paragraph>
       <Title level={5} editable>Editable Title</Title>
     </Space>

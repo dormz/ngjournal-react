@@ -67,7 +67,7 @@ export const DefaultValue: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Cascader size="large" options={options} placeholder="Large" style={{ width: 300 }} />
       <Cascader options={options} placeholder="Default" style={{ width: 300 }} />
       <Cascader size="small" options={options} placeholder="Small" style={{ width: 300 }} />
@@ -105,7 +105,7 @@ export const Disabled: Story = {
 
 export const StatusValidation: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Cascader options={options} status="error" style={{ width: 300 }} placeholder="Error" />
       <Cascader options={options} status="warning" style={{ width: 300 }} placeholder="Warning" />
     </Space>

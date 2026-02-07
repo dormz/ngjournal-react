@@ -36,7 +36,7 @@ const AppDemo = () => {
       <Button
         onClick={() =>
           notification.info({
-            message: 'Notification',
+            title: 'Notification',
             description: 'This is a notification from App context.',
           })
         }

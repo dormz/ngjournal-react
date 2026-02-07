@@ -75,7 +75,7 @@ export const Disabled: Story = {
 
 export const StatusValidation: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <AutoComplete options={mockOptions} style={{ width: 200 }} status="error" placeholder="Error" />
       <AutoComplete options={mockOptions} style={{ width: 200 }} status="warning" placeholder="Warning" />
     </Space>

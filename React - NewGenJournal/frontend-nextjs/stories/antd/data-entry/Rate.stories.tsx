@@ -34,7 +34,7 @@ export const HalfStar: Story = {
 
 export const CustomCharacter: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Rate character={<HeartFilled />} allowHalf defaultValue={2.5} style={{ color: '#eb2f96' }} />
       <Rate character="A" allowHalf defaultValue={2.5} />
       <Rate character="好" allowHalf defaultValue={2.5} />

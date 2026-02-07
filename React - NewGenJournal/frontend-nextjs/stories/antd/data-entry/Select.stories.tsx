@@ -38,7 +38,7 @@ export const Default: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Select size="large" defaultValue="lucy" style={{ width: 200 }} options={options} />
       <Select defaultValue="lucy" style={{ width: 200 }} options={options} />
       <Select size="small" defaultValue="lucy" style={{ width: 200 }} options={options} />

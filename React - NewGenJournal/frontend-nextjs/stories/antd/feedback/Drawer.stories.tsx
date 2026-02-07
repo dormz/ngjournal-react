@@ -139,7 +139,7 @@ const FormDrawer = () => {
       </Button>
       <Drawer
         title="Create a new account"
-        width={720}
+        size={720}
         onClose={() => setOpen(false)}
         open={open}
         extra={
@@ -165,10 +165,13 @@ const FormDrawer = () => {
           <Row gutter={16}>
             <Col span={12}>
               <Form.Item name="owner" label="Owner" rules={[{ required: true, message: 'Please select an owner' }]}>
-                <Select placeholder="Please select an owner">
-                  <Select.Option value="jack">Jack</Select.Option>
-                  <Select.Option value="tom">Tom</Select.Option>
-                </Select>
+                <Select
+                  placeholder="Please select an owner"
+                  options={[
+                    { value: 'jack', label: 'Jack' },
+                    { value: 'tom', label: 'Tom' },
+                  ]}
+                />
               </Form.Item>
             </Col>
             <Col span={12}>

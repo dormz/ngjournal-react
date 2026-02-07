@@ -100,10 +100,18 @@ export const Trigger: Story = {
 export const ButtonDropdown: Story = {
   render: () => (
     <Space>
-      <Dropdown.Button menu={{ items }}>Actions</Dropdown.Button>
-      <Dropdown.Button menu={{ items }} type="primary">
-        Actions
-      </Dropdown.Button>
+      <Space.Compact>
+        <Button>Actions</Button>
+        <Dropdown menu={{ items }}>
+          <Button icon={<DownOutlined />} />
+        </Dropdown>
+      </Space.Compact>
+      <Space.Compact>
+        <Button type="primary">Actions</Button>
+        <Dropdown menu={{ items }}>
+          <Button type="primary" icon={<DownOutlined />} />
+        </Dropdown>
+      </Space.Compact>
     </Space>
   ),
 };

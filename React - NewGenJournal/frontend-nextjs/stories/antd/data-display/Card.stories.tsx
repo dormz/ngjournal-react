@@ -12,7 +12,7 @@ const meta: Meta<typeof Card> = {
   component: Card,
   argTypes: {
     size: { control: 'select', options: ['default', 'small'] },
-    bordered: { control: 'boolean' },
+    variant: { control: 'select', options: ['outlined', 'borderless'] },
     loading: { control: 'boolean' },
     hoverable: { control: 'boolean' },
   },
@@ -39,7 +39,7 @@ export const Default: Story = {
 export const NoBorder: Story = {
   render: () => (
     <div style={{ background: '#ececec', padding: 30 }}>
-      <Card title="Card title" bordered={false} style={{ width: 300 }}>
+      <Card title="Card title" variant="borderless" style={{ width: 300 }}>
         <p>Card content</p>
         <p>Card content</p>
         <p>Card content</p>
@@ -106,17 +106,17 @@ export const GridCards: Story = {
   render: () => (
     <Row gutter={16}>
       <Col span={8}>
-        <Card title="Card title" bordered={false}>
+        <Card title="Card title" variant="borderless">
           Card content
         </Card>
       </Col>
       <Col span={8}>
-        <Card title="Card title" bordered={false}>
+        <Card title="Card title" variant="borderless">
           Card content
         </Card>
       </Col>
       <Col span={8}>
-        <Card title="Card title" bordered={false}>
+        <Card title="Card title" variant="borderless">
           Card content
         </Card>
       </Col>

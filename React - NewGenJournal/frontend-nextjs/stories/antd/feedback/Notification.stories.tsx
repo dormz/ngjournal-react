@@ -25,7 +25,7 @@ const NotificationDemo = () => {
       <Button
         onClick={() =>
           notification.open({
-            message: 'Notification Title',
+            title: 'Notification Title',
             description:
               'This is the content of the notification. This is the content of the notification.',
           })
@@ -36,7 +36,7 @@ const NotificationDemo = () => {
       <Button
         onClick={() =>
           notification.success({
-            message: 'Success',
+            title: 'Success',
             description: 'This is a success notification.',
           })
         }
@@ -46,7 +46,7 @@ const NotificationDemo = () => {
       <Button
         onClick={() =>
           notification.info({
-            message: 'Info',
+            title: 'Info',
             description: 'This is an info notification.',
           })
         }
@@ -56,7 +56,7 @@ const NotificationDemo = () => {
       <Button
         onClick={() =>
           notification.warning({
-            message: 'Warning',
+            title: 'Warning',
             description: 'This is a warning notification.',
           })
         }
@@ -66,7 +66,7 @@ const NotificationDemo = () => {
       <Button
         onClick={() =>
           notification.error({
-            message: 'Error',
+            title: 'Error',
             description: 'This is an error notification.',
           })
         }
@@ -86,7 +86,7 @@ const PlacementDemo = () => {
 
   const openNotification = (placement: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight') => {
     notification.info({
-      message: `Notification ${placement}`,
+      title: `Notification ${placement}`,
       description: `This notification is placed at ${placement}.`,
       placement,
     });
@@ -122,7 +122,7 @@ const DurationDemo = () => {
       <Button
         onClick={() =>
           notification.open({
-            message: 'Auto close (4.5s)',
+            title: 'Auto close (4.5s)',
             description: 'Default auto close.',
           })
         }
@@ -132,7 +132,7 @@ const DurationDemo = () => {
       <Button
         onClick={() =>
           notification.open({
-            message: 'Never auto close',
+            title: 'Never auto close',
             description: 'This will not auto close.',
             duration: 0,
           })
@@ -153,7 +153,7 @@ const WithButtonDemo = () => {
 
   const openNotification = () => {
     const key = `open${Date.now()}`;
-    const btn = (
+    const actions = (
       <Space>
         <Button size="small" onClick={() => notification.destroy(key)}>
           Dismiss
@@ -164,9 +164,9 @@ const WithButtonDemo = () => {
       </Space>
     );
     notification.open({
-      message: 'Notification Title',
+      title: 'Notification Title',
       description: 'A function will be called after the notification is closed.',
-      btn,
+      actions,
       key,
     });
   };

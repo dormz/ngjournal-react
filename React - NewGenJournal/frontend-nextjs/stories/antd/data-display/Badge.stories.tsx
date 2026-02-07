@@ -71,7 +71,7 @@ export const Dot: Story = {
 
 export const Status: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Space>
         <Badge status="success" />
         <Badge status="error" />
@@ -79,7 +79,7 @@ export const Status: Story = {
         <Badge status="processing" />
         <Badge status="warning" />
       </Space>
-      <Space direction="vertical">
+      <Space orientation="vertical">
         <Badge status="success" text="Success" />
         <Badge status="error" text="Error" />
         <Badge status="default" text="Default" />
@@ -105,7 +105,7 @@ export const Sizes: Story = {
 
 export const Colors: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Space wrap>
         {['pink', 'red', 'yellow', 'orange', 'cyan', 'green', 'blue', 'purple', 'geekblue', 'magenta', 'volcano', 'gold', 'lime'].map(
           (color) => (
@@ -121,7 +121,7 @@ export const Colors: Story = {
 
 export const Ribbon: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="middle" style={{ width: '100%' }}>
       <Badge.Ribbon text="Hippie">
         <div
           style={{

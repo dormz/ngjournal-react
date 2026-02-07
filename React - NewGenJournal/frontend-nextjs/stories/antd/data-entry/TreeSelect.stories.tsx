@@ -99,7 +99,7 @@ export const Disabled: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <TreeSelect size="large" treeData={treeData} placeholder="Large" style={{ width: 300 }} />
       <TreeSelect treeData={treeData} placeholder="Default" style={{ width: 300 }} />
       <TreeSelect size="small" treeData={treeData} placeholder="Small" style={{ width: 300 }} />

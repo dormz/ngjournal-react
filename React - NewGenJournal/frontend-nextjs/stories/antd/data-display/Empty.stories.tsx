@@ -36,7 +36,7 @@ export const WithAction: Story = {
   render: () => (
     <Empty
       image="https://gw.alipayobjects.com/zos/antfincdn/ZHrcdLPrvN/empty.svg"
-      imageStyle={{ height: 60 }}
+      styles={{ image: { height: 60 } }}
       description={<span>Customize <a href="#">Description</a></span>}
     >
       <Button type="primary">Create Now</Button>

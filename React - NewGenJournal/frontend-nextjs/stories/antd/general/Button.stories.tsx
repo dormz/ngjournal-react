@@ -69,7 +69,7 @@ export const Link: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Space>
         <Button type="primary" size="large">Large</Button>
         <Button type="primary">Default</Button>
@@ -148,7 +148,7 @@ export const Block: Story = {
 
 export const Disabled: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Space>
         <Button type="primary">Primary</Button>
         <Button type="primary" disabled>Primary (disabled)</Button>

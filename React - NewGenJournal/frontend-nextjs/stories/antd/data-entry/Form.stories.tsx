@@ -205,11 +205,14 @@ export const Registration: Story = {
       </Form.Item>
 
       <Form.Item label="Gender" name="gender">
-        <Select placeholder="Select your gender">
-          <Select.Option value="male">Male</Select.Option>
-          <Select.Option value="female">Female</Select.Option>
-          <Select.Option value="other">Other</Select.Option>
-        </Select>
+        <Select
+          placeholder="Select your gender"
+          options={[
+            { value: 'male', label: 'Male' },
+            { value: 'female', label: 'Female' },
+            { value: 'other', label: 'Other' },
+          ]}
+        />
       </Form.Item>
 
       <Form.Item
@@ -319,7 +322,7 @@ export const DisabledForm: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       <Form size="small" layout="inline">
         <Form.Item label="Small">
           <Input placeholder="Small size" />

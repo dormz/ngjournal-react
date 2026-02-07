@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div style={{ maxWidth: 960, margin: '0 auto', padding: '32px 16px' }}>
       {/* ---- Header ---- */}
-      <Flex justify="space-between" align="center" wrap="wrap" gap={16}>
+      <Flex justify="space-between" align="center" wrap gap={16}>
         <Title level={3} style={{ margin: 0 }}>
           NewGenJournal
         </Title>
@@ -56,24 +56,24 @@ export default function Home() {
 
         {/* Form inputs */}
         <Card title="Inputs" size="small">
-          <Space direction="vertical" style={{ width: '100%', maxWidth: 360 }}>
+          <Flex vertical style={{ width: '100%', maxWidth: 360 }}>
             <Input prefix={<UserOutlined />} placeholder="Username" />
             <Input.Password prefix={<LockOutlined />} placeholder="Password" />
             <Flex gap={12}>
               <Switch defaultChecked />
               <Text>Enable notifications</Text>
             </Flex>
-          </Space>
+          </Flex>
         </Card>
 
         {/* Feedback */}
         <Card title="Feedback" size="small">
-          <Space direction="vertical" style={{ width: '100%' }}>
-            <Alert message="Informational note" type="info" showIcon />
-            <Alert message="Operation successful" type="success" showIcon />
-            <Alert message="Something needs attention" type="warning" showIcon />
-            <Alert message="Something went wrong" type="error" showIcon />
-          </Space>
+          <Flex vertical style={{ width: '100%' }}>
+            <Alert title="Informational note" type="info" showIcon />
+            <Alert title="Operation successful" type="success" showIcon />
+            <Alert title="Something needs attention" type="warning" showIcon />
+            <Alert title="Something went wrong" type="error" showIcon />
+          </Flex>
         </Card>
 
         {/* Tags & Badges */}
@@ -95,11 +95,11 @@ export default function Home() {
 
         {/* Progress */}
         <Card title="Progress" size="small">
-          <Space direction="vertical" style={{ width: '100%' }}>
+          <Flex vertical style={{ width: '100%' }}>
             <Progress percent={75} />
             <Progress percent={100} />
             <Progress percent={40} status="exception" />
-          </Space>
+          </Flex>
         </Card>
 
         <Paragraph type="secondary" style={{ textAlign: 'center' }}>

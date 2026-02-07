@@ -36,7 +36,7 @@ export const Disabled: Story = {
 
 export const TextAndIcon: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <Switch checkedChildren="On" unCheckedChildren="Off" defaultChecked />
       <Switch checkedChildren="1" unCheckedChildren="0" />
       <Switch

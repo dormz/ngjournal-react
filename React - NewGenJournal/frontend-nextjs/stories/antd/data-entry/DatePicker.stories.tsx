@@ -28,7 +28,7 @@ export const Default: Story = {
 
 export const Pickers: Story = {
   render: () => (
-    <Space direction="vertical" size="middle">
+    <Space orientation="vertical" size="middle">
       <DatePicker placeholder="Select date" />
       <DatePicker picker="week" placeholder="Select week" />
       <DatePicker picker="month" placeholder="Select month" />
@@ -40,7 +40,7 @@ export const Pickers: Story = {
 
 export const RangePickerDemo: Story = {
   render: () => (
-    <Space direction="vertical" size="middle">
+    <Space orientation="vertical" size="middle">
       <RangePicker />
       <RangePicker showTime />
       <RangePicker picker="week" />
@@ -53,7 +53,7 @@ export const RangePickerDemo: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical" size="middle">
+    <Space orientation="vertical" size="middle">
       <DatePicker size="large" />
       <DatePicker />
       <DatePicker size="small" />
@@ -77,7 +77,7 @@ export const Disabled: Story = {
 
 export const StatusValidation: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <DatePicker status="error" />
       <DatePicker status="warning" />
       <RangePicker status="error" />

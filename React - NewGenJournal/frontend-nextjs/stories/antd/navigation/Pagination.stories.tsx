@@ -72,7 +72,7 @@ export const Disabled: Story = {
 
 export const Mini: Story = {
   render: () => (
-    <Space direction="vertical" size="middle">
+    <Space orientation="vertical" size="middle">
       <Pagination size="small" total={50} />
       <Pagination size="small" total={50} showSizeChanger showQuickJumper />
       <Pagination size="small" total={50} showTotal={(total) => `Total ${total} items`} />

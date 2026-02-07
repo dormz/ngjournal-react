@@ -11,7 +11,7 @@ const meta: Meta<typeof Tabs> = {
   argTypes: {
     type: { control: 'select', options: ['line', 'card', 'editable-card'] },
     size: { control: 'select', options: ['small', 'middle', 'large'] },
-    tabPosition: { control: 'select', options: ['top', 'right', 'bottom', 'left'] },
+    tabPlacement: { control: 'select', options: ['top', 'right', 'bottom', 'left'] },
     centered: { control: 'boolean' },
   },
 };
@@ -75,7 +75,7 @@ export const CardType: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       <Tabs
         size="small"
         items={[
@@ -103,7 +103,7 @@ export const Sizes: Story = {
 export const Position: Story = {
   render: () => (
     <Tabs
-      tabPosition="left"
+      tabPlacement="left"
       items={[
         { key: '1', label: 'Tab 1', children: 'Content of Tab 1' },
         { key: '2', label: 'Tab 2', children: 'Content of Tab 2' },

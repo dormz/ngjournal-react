@@ -63,7 +63,7 @@ export const ButtonSkeleton: Story = {
 
 export const InputSkeleton: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: 300 }}>
+    <Space orientation="vertical" style={{ width: 300 }}>
       <Skeleton.Input active size="large" block />
       <Skeleton.Input active block />
       <Skeleton.Input active size="small" block />

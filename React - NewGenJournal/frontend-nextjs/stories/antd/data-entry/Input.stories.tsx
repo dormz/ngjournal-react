@@ -29,7 +29,7 @@ export const Default: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: 300 }}>
+    <Space orientation="vertical" size="middle" style={{ width: 300 }}>
       <Input size="large" placeholder="Large input" prefix={<UserOutlined />} />
       <Input placeholder="Default input" prefix={<UserOutlined />} />
       <Input size="small" placeholder="Small input" prefix={<UserOutlined />} />
@@ -39,7 +39,7 @@ export const Sizes: Story = {
 
 export const PrefixSuffix: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: 300 }}>
+    <Space orientation="vertical" size="middle" style={{ width: 300 }}>
       <Input
         placeholder="Enter your username"
         prefix={<UserOutlined style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -53,7 +53,7 @@ export const PrefixSuffix: Story = {
 
 export const SearchInput: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: 300 }}>
+    <Space orientation="vertical" size="middle" style={{ width: 300 }}>
       <Search placeholder="input search text" onSearch={(value) => console.log(value)} />
       <Search placeholder="input search text" allowClear onSearch={(value) => console.log(value)} />
       <Search placeholder="input search text" enterButton onSearch={(value) => console.log(value)} />
@@ -64,7 +64,7 @@ export const SearchInput: Story = {
 
 export const PasswordInput: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: 300 }}>
+    <Space orientation="vertical" size="middle" style={{ width: 300 }}>
       <Password placeholder="input password" />
       <Password
         placeholder="input password"
@@ -76,7 +76,7 @@ export const PasswordInput: Story = {
 
 export const TextAreaDemo: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: 400 }}>
+    <Space orientation="vertical" size="middle" style={{ width: 400 }}>
       <TextArea rows={4} placeholder="Basic textarea" />
       <TextArea rows={4} placeholder="maxLength is 6" maxLength={6} />
       <TextArea showCount maxLength={100} placeholder="With character count" />
@@ -88,7 +88,7 @@ export const TextAreaDemo: Story = {
 
 export const StatusValidation: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: 300 }}>
+    <Space orientation="vertical" size="middle" style={{ width: 300 }}>
       <Input status="error" placeholder="Error status" />
       <Input status="warning" placeholder="Warning status" />
       <Input status="error" prefix={<UserOutlined />} placeholder="Error with prefix" />
@@ -113,7 +113,7 @@ export const Disabled: Story = {
 
 export const AddonBeforeAfter: Story = {
   render: () => (
-    <Space direction="vertical" size="middle" style={{ width: 400 }}>
+    <Space orientation="vertical" size="middle" style={{ width: 400 }}>
       <Input addonBefore="http://" addonAfter=".com" defaultValue="mysite" />
       <Input addonBefore="https://" defaultValue="mysite" />
       <Input addonAfter=".com" defaultValue="mysite" />

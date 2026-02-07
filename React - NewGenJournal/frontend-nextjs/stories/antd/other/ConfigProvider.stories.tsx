@@ -34,7 +34,7 @@ export const CustomTheme: Story = {
         },
       }}
     >
-      <Space direction="vertical" size="middle">
+      <Space orientation="vertical" size="middle">
         <Space>
           <Button type="primary">Primary</Button>
           <Button>Default</Button>
@@ -69,7 +69,7 @@ export const DarkAlgorithm: Story = {
       }}
     >
       <div style={{ padding: 24, background: '#141414', borderRadius: 8 }}>
-        <Space direction="vertical" size="middle">
+        <Space orientation="vertical" size="middle">
           <Space>
             <Button type="primary">Primary</Button>
             <Button>Default</Button>
@@ -85,7 +85,7 @@ export const DarkAlgorithm: Story = {
 export const CompactSize: Story = {
   render: () => (
     <ConfigProvider componentSize="small">
-      <Space direction="vertical" size="middle">
+      <Space orientation="vertical" size="middle">
         <Space>
           <Button type="primary">Small Primary</Button>
           <Button>Small Default</Button>
@@ -107,7 +107,7 @@ export const CompactSize: Story = {
 
 export const BrandColor: Story = {
   render: () => (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       <ConfigProvider theme={{ token: { colorPrimary: '#1677ff' } }}>
         <Space>
           <Button type="primary">Blue Theme</Button>
@@ -142,7 +142,7 @@ export const BrandColor: Story = {
 
 export const BorderRadius: Story = {
   render: () => (
-    <Space direction="vertical" size="large" style={{ width: '100%' }}>
+    <Space orientation="vertical" size="large" style={{ width: '100%' }}>
       <ConfigProvider theme={{ token: { borderRadius: 0 } }}>
         <Space>
           <Button type="primary">No Radius</Button>

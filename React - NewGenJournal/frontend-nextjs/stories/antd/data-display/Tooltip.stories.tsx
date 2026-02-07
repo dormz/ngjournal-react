@@ -42,14 +42,14 @@ export const Placement: Story = {
         </Space>
       </div>
       <div style={{ width: 70, float: 'left', marginTop: 8 }}>
-        <Space direction="vertical">
+        <Space orientation="vertical">
           <Tooltip placement="leftTop" title="Prompt text"><Button>LT</Button></Tooltip>
           <Tooltip placement="left" title="Prompt text"><Button>Left</Button></Tooltip>
           <Tooltip placement="leftBottom" title="Prompt text"><Button>LB</Button></Tooltip>
         </Space>
       </div>
       <div style={{ width: 70, marginLeft: 304, marginTop: 8 }}>
-        <Space direction="vertical">
+        <Space orientation="vertical">
           <Tooltip placement="rightTop" title="Prompt text"><Button>RT</Button></Tooltip>
           <Tooltip placement="right" title="Prompt text"><Button>Right</Button></Tooltip>
           <Tooltip placement="rightBottom" title="Prompt text"><Button>RB</Button></Tooltip>

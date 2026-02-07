@@ -61,7 +61,7 @@ export const ReadOnly: Story = {
 
 export const StatusValidation: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: '100%' }}>
+    <Space orientation="vertical" style={{ width: '100%' }}>
       <Mentions status="error" placeholder="Error status" options={defaultOptions} />
       <Mentions status="warning" placeholder="Warning status" options={defaultOptions} />
     </Space>
@@ -70,7 +70,7 @@ export const StatusValidation: Story = {
 
 export const Placement: Story = {
   render: () => (
-    <Space direction="vertical" style={{ width: '100%' }}>
+    <Space orientation="vertical" style={{ width: '100%' }}>
       <Mentions placement="top" placeholder="Placement top" options={defaultOptions} />
       <Mentions placement="bottom" placeholder="Placement bottom" options={defaultOptions} />
     </Space>

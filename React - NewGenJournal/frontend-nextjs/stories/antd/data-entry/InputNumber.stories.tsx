@@ -93,7 +93,7 @@ export const Borderless: Story = {
 
 export const WithAddon: Story = {
   render: () => (
-    <Space direction="vertical">
+    <Space orientation="vertical">
       <InputNumber addonBefore="+" addonAfter="$" defaultValue={100} />
       <InputNumber addonBefore="http://" addonAfter=".com" defaultValue="mysite" />
     </Space>
