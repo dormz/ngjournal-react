@@ -1,6 +1,8 @@
 import type { ThemeConfig } from 'antd';
 import { theme } from 'antd';
 
+import { classicTheme } from './themes/classic';
+
 // ---------------------------------------------------------------------------
 // Tenant theme definition
 // ---------------------------------------------------------------------------
@@ -105,6 +107,12 @@ export const tenantThemes: Record<string, TenantTheme> = {
         colorInfo: '#818cf8',
       },
     },
+  },
+
+  classic: {
+    key: 'classic',
+    label: 'Classic',
+    antdTheme: classicTheme,
   },
 };
 
