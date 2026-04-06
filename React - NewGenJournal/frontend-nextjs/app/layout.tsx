@@ -7,6 +7,8 @@ import { AntdRegistry } from '@ant-design/nextjs-registry';
 
 import { ThemeProvider } from './theme';
 
+import StoreProvider from './StoreProvider';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -35,9 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <AntdRegistry>
-          <ThemeProvider>{children}</ThemeProvider>
-        </AntdRegistry>
+        <StoreProvider>
+          <AntdRegistry>
+            <ThemeProvider>{children}</ThemeProvider>
+          </AntdRegistry>
+        </StoreProvider>
       </body>
     </html>
   );
